@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar-nav .nav-link {
+  margin-right: 45px;
+}
+
+.navbar-nav .nav-link:last-child {
+  margin-right: 0;
+}
+.navbar-brand {
+  background-color: #00C01E; /* 원하는 배경색으로 변경 */
+  border-radius: 5px; /* 둥근 모서리 */
+  padding: 5px 10px; /* 텍스트 주위에 여백 추가 */
+}
+
+.signup-link {
+  background-color: #2EAFCB; /* 원하는 배경색으로 변경 */
+  border-radius: 5px; /* 둥근 모서리 */
+  padding: 5px 10px; /* 텍스트 주위에 여백 추가 */
+}
+
+.nav-link-custom {
+  font-size: 16px;
+}
+
+.signup-link {
+  font-size: 16px; /* 글자 크기 설정 */
+}
+
+.nav-link-custom {
+  font-size: 16px;
+}
