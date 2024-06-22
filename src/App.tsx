@@ -46,15 +46,17 @@ const CenteredNavbar = () => {
               src={MaskGroupSvg} // 이미지 경로 변수 사용
               alt="사진 설명" // 사진 대체 텍스트
               style={{
-                width: '640px',
-                height: '590px',
+                width: '100%',
+                maxWidth: '640px',
+                height: 'auto',
               }} // 사진 스타일 적용
             />
           </Col>
           <Col md={6}>
             <div style={{
-              width: '450px',
-              height: '590px',
+              width: '100%',
+              maxWidth: '450px',
+              height: 'auto',
               backgroundColor: '#E5E5E5',
               display: 'flex',
               flexDirection: 'column',
@@ -66,13 +68,12 @@ const CenteredNavbar = () => {
               borderTopLeftRadius: '10px', // 왼쪽 위 둥근 모서리 설정
               borderBottomLeftRadius: '10px', // 왼쪽 아래 둥근 모서리 설정
             }}>
-
-              <div style={{  textAlign: 'left' }}>
+              <div style={{ textAlign: 'left' }}>
                 온라인상담
               </div>
               <hr style={{ width: '110%', margin: '10px 0', borderTop: '2px solid #000' }} /> {/* 검은색 선 추가 */}
               <Form style={{ zIndex: '1', display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px' }}>
-                <div  style={{ display: 'flex', gap: '10px' }}>
+                <div style={{ display: 'flex', gap: '10px' }}>
                   <Form.Control type="text" placeholder="이름" />
                   <Form.Control type="tel" placeholder="전화번호" />
                 </div>
@@ -118,6 +119,59 @@ const CenteredNavbar = () => {
                   </Button>
                 </div>
               </Form>
+            </div>
+          </Col>
+        </Row>
+        <Row className="justify-content-center" style={{ marginTop: '117px', marginBottom: '117px' }}>
+          <Col xs={10} md={6} style={{ padding: '0', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div
+              style={{
+                width: '640px',
+                height: '180px',
+                marginLeft: '10px',
+                backgroundColor: '#7088A5',
+                borderRadius: '10px 0 0 10px',
+                color: '#FFFFFF', // 흰색 글자색 추가
+                textAlign: 'center', // 텍스트 중앙 정렬
+                fontSize: '30px', // 글자 크기 조정
+                fontWeight: 'bold', // 글자 굵기 설정
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              📞 053-123-1234
+            </div>
+          </Col>
+          <Col xs={10} md={6} style={{ padding: '0', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div
+              style={{
+                width: '640px',
+                height: '180px',
+                marginLeft: '-25px',
+                marginRight: '25px',
+                backgroundColor: '#394D65',
+                borderRadius: '0 10px 10px 0',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-around',
+                padding: '20px',
+                color: '#FFFFFF', // 흰색 글자색 추가
+                textAlign: 'left', // 텍스트 왼쪽 정렬
+              }}
+            >
+              <div style={{ textAlign: 'left' }}>
+                <span style={{ fontSize: '18px', fontWeight: 'bold' }}>&ensp;&ensp;&ensp;&ensp; 실시간 상담 현황</span><br/><br/>
+              </div>
+              <div style={{ marginBottom: '10px', marginLeft: '10px', letterSpacing: '2px' }}>
+                <span>&emsp;&emsp;상담완료  &emsp;&emsp;김*민&emsp;&emsp;  010-****-1234</span>
+              </div>
+              <div style={{ marginBottom: '10px', marginLeft: '10px', letterSpacing: '2px' }}>
+                <span>&emsp;&emsp;상담완료  &emsp;&emsp;김*민&emsp;&emsp;  010-****-1234</span>
+              </div>
+              <div style={{ marginBottom: '10px', marginLeft: '10px', letterSpacing: '2px' }}>
+                <span>&emsp;&emsp;진행중    &emsp;&emsp;&emsp;김*민&emsp;&emsp;  010-****-1234</span>
+              </div>
             </div>
           </Col>
         </Row>
