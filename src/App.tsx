@@ -63,7 +63,7 @@ const CenteredNavbar = () => {
               alignItems: 'center',
               justifyContent: 'center',
               padding: '20px', // 내부 여백 추가
-              marginLeft: '40px', // 왼쪽으로 조금 더 이동
+              marginLeft: '60px', // 왼쪽으로 조금 더 이동
               border: '1px solid #ccc', // 약하게 실선 테두리 추가
               borderTopLeftRadius: '10px', // 왼쪽 위 둥근 모서리 설정
               borderBottomLeftRadius: '10px', // 왼쪽 아래 둥근 모서리 설정
@@ -174,7 +174,60 @@ const CenteredNavbar = () => {
               </div>
             </div>
           </Col>
+          <Col xs={10} md={6} style={{ padding: '0', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div
+              style={{
+                width: '100%',
+                maxWidth: '640px',
+                height: '300px',
+                backgroundColor: '#F0F0F0',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '117px',
+              }}
+            >
+              <img
+                src={`${process.env.PUBLIC_URL}/images/map-placeholder.jpg`} // 지도 이미지 경로
+                alt="지도" // 이미지 대체 텍스트
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  marginLeft: '10px',
+                  maxWidth: '600px',
+                  borderRadius: '10px',
+                }} // 이미지 스타일
+              />
+            </div>
+          </Col>
+          <Col xs={10} md={6} style={{ padding: '0', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div
+              style={{
+                width: '100%',
+                maxWidth: '640px',
+                height: '300px',
+                                marginLeft: '-25px',
+                marginRight: '25px',
+                backgroundColor: '#6D6D6D',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '117px',
+              }}
+            >
+              <div style={{ textAlign: 'left', padding: '20px' }}>
+                <span style={{ fontSize: '18px', fontWeight: 'bold' }}>공지사항</span>
+                <hr style={{ width: '100%', margin: '10px 0', borderTop: '2px solid #000' }} /> {/* 검은색 선 추가 */}
+                <p>이 공간에 공지사항 내용을 입력하세요.</p>
+              </div>
+            </div>
+          </Col>
         </Row>
+
+
+        {/* 여기서부터 작성 */}
       </Container>
     </div>
   );
