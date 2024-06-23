@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { Navbar, Nav, Container, Row, Col, Form, Button } from 'react-bootstrap';
 import './App.css'; // CSS 파일 임포트
 import MaskGroupSvg from './Mask group.svg'; // 이미지 경로 import
 
 const CenteredNavbar = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  //const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // 화면 크기 변경 시 사진 너비 조정
   const handleResize = () => {
-    setWindowWidth(window.innerWidth);
+    //setWindowWidth(window.innerWidth);
   };
 
   // 컴포넌트가 마운트될 때와 창 크기 변경 시에도 사진 크기를 조정하기 위해 이벤트 리스너 등록
