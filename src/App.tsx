@@ -1,4 +1,4 @@
-import React, {  useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Navbar, Nav, Container, Row, Col, Form, Button } from 'react-bootstrap';
 import './App.css'; // CSS 파일 임포트
 import MaskGroupSvg from './Mask group.svg'; // 이미지 경로 import
@@ -161,7 +161,7 @@ const CenteredNavbar = () => {
               }}
             >
               <div style={{ textAlign: 'left' }}>
-                <span style={{ fontSize: '18px', fontWeight: 'bold' }}>&ensp;&ensp;&ensp;&ensp; 실시간 상담 현황</span><br/><br/>
+                <span style={{ fontSize: '18px', fontWeight: 'bold' }}>&ensp;&ensp;&ensp;&ensp; 실시간 상담 현황</span><br /><br />
               </div>
               <div style={{ marginBottom: '10px', marginLeft: '10px', letterSpacing: '2px' }}>
                 <span>&emsp;&emsp;상담완료  &emsp;&emsp;김*민&emsp;&emsp;  010-****-1234</span>
@@ -207,7 +207,7 @@ const CenteredNavbar = () => {
                 width: '100%',
                 maxWidth: '640px',
                 height: '300px',
-                                marginLeft: '-25px',
+                marginLeft: '-25px',
                 marginRight: '25px',
                 backgroundColor: '#6D6D6D',
                 display: 'flex',
@@ -225,7 +225,6 @@ const CenteredNavbar = () => {
             </div>
           </Col>
         </Row>
-              테스트
 
         {/* 여기서부터 작성 */}
       </Container>
