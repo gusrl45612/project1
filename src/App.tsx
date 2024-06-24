@@ -225,7 +225,7 @@ const CenteredNavbar = () => {
             </div>
           </Col>
         </Row>
-
+              테스트
 
         {/* 여기서부터 작성 */}
       </Container>
