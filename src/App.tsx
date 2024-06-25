@@ -2,16 +2,50 @@ import React, { useEffect } from 'react';
 import { AppBar, Toolbar, Typography, Container, Grid, Box, TextField, Button, MenuItem, Checkbox, FormControlLabel } from '@mui/material';
 import './App.css'; // CSS 파일 임포트
 import MaskGroupSvg from './Mask group.svg'; // 이미지 경로 import
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles((theme) => ({
+  navLink: {
+    marginRight: '60px',
+    fontSize: '16px',
+    '&:last-child': {
+      marginRight: 0,
+    },
+  },
+  signupLink: {
+    backgroundColor: '#2EAFCB', // 원하는 배경색으로 변경
+    borderRadius: '5px', // 둥근 모서리
+    padding: '5px 10px', // 텍스트 주위에 여백 추가
+    fontSize: '16px', // 글자 크기 설정
+  },
+}));
+
+const CustomAppBar = () => {
+  const classes = useStyles();
+  
+  return (
+    <AppBar position="static" color="transparent">
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          회사이름 로고
+        </Typography>
+        <Box sx={{ flexGrow: 60, display: 'flex', justifyContent: 'center' }}>
+          <nav>
+            <Button color="inherit" href="#home" className={classes.navLink}>회사소개</Button>
+            <Button color="inherit" href="#link" className={classes.navLink}>시공사례</Button>
+            <Button color="inherit" href="#about" className={classes.navLink}>시공상담</Button>
+            <Button color="inherit" href="#contact" className={classes.navLink}>고객후기</Button>
+          </nav>
+        </Box>
+        <Button color="inherit" href="#" className={classes.signupLink}>회원가입</Button>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 const CenteredNavbar = () => {
-  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const handleResize = () => {};
 
-  // 화면 크기 변경 시 사진 너비 조정
-  const handleResize = () => {
-    // setWindowWidth(window.innerWidth);
-  };
-
-  // 컴포넌트가 마운트될 때와 창 크기 변경 시에도 사진 크기를 조정하기 위해 이벤트 리스너 등록
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     return () => {
@@ -21,21 +55,7 @@ const CenteredNavbar = () => {
 
   return (
     <div>
-      <AppBar position="static" color="transparent">
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            회사이름 로고
-          </Typography>
-          <nav>
-            <Button color="inherit" href="#home">회사소개</Button>
-            <Button color="inherit" href="#link">시공사례</Button>
-            <Button color="inherit" href="#about">시공상담</Button>
-            <Button color="inherit" href="#contact">고객후기</Button>
-            <Button color="inherit" href="#" className="signup-link">회원가입</Button>
-          </nav>
-        </Toolbar>
-      </AppBar>
-
+      <CustomAppBar />
       <Container>
         <Grid container justifyContent="center" spacing={4} style={{ marginTop: '117px' }}>
           <Grid item md={6}>
@@ -189,7 +209,6 @@ const CenteredNavbar = () => {
                 style={{
                   width: '100%',
                   height: '100%',
-                  ml: 1,
                   maxWidth: '600px',
                   borderRadius: '10px',
                 }} // 이미지 스타일
