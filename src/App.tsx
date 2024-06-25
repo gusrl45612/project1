@@ -4,6 +4,18 @@ import './App.css'; // CSS 파일 임포트
 import MaskGroupSvg from './Mask group.svg'; // 이미지 경로 import
 import { makeStyles } from '@mui/styles';
 
+
+const CenteredNavbar = () => {
+  const handleResize = () => {};
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  
 const useStyles = makeStyles((theme) => ({
   navLink: {
     marginRight: '60px',
@@ -43,15 +55,7 @@ const CustomAppBar = () => {
   );
 };
 
-const CenteredNavbar = () => {
-  const handleResize = () => {};
 
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
     <div>
