@@ -141,9 +141,10 @@ const CenteredNavbar = () => {
           <Grid item xs={10} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box
               sx={{
-                width: '640px',
+                width: '650px',
                 height: '180px',
                 ml: 1,
+                mr: -3,
                 backgroundColor: '#7088A5',
                 borderRadius: '10px 0 0 10px',
                 color: '#FFFFFF', // 흰색 글자색 추가
@@ -201,6 +202,8 @@ const CenteredNavbar = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 mt: 9,
+                mr: -3,
+
               }}
             >
               <img
